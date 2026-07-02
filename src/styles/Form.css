@@ -1,0 +1,118 @@
+/* Form Styles*/
+*{
+    font-family: Geist;
+}
+
+
+.formComponent {
+    width: 500px;
+    height: 800px;
+    margin: auto;
+    background-color: lab(7.78201% -.0000149012 0);
+    border-radius: 2rem; 
+    overflow: hidden;
+}
+
+
+.formContents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    background-color: lab(7.78201% -.0000149012 0);
+}
+
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    color: lab(98.26% 0 0);
+}
+
+.contentSection label {
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.contentSection textarea{
+    background-color: rgb(39, 39, 39);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.formContents input {
+    width: 350px;
+    padding: 0.3rem;
+    background-color: rgb(39, 39, 39);
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    font-size: 15px;
+
+}
+
+
+.formContents input::placeholder {
+    color: rgb(184, 184, 184);
+}
+
+.formContents input:focus {
+    outline: 0.29rem solid ;
+    outline-color: rgb(73, 73, 73);
+}
+
+
+.formContents input[type=date]:invalid::-webkit-datetime-edit {
+    color: rgb(184,184,184);
+}
+
+.submitButton{
+    background-color: lab(7.78201% -.0000149012 0);
+    margin-top: 1.3rem;
+}
+
+.submitButton button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.submitButton button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+
+/* resumeStyles */
+.resumeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+}
+
+.resumeContainer button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.resumeContainer button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.resumeContainer h1 {
+    color: rgb(247, 247, 247);
+}
+
+.emailNumber {
+    display: flex;
+    gap: 1rem;
+    
+}
