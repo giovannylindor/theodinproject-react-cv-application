@@ -18,14 +18,15 @@ function RenderedForm({infoData, setIsSubmitted}){
             <h2>Education</h2>
             <p>{infoData.schoolName}</p>
             <p>Major: {infoData.major}</p>
-            <p>Date Started: {infoData.dateOfStudy}</p>
+            <p><strong>Date Started:</strong> {infoData.dateOfStudy}</p>
             
 
             <h2>Work Experience</h2>
             <h3>{infoData.companyName}</h3>
             <p>{infoData.positionTitle}</p>
-            <p>{infoData.dateStarted} - {infoData.dateEnded}</p>
-            <p>{infoData.jobDescription}</p>
+            <p><strong>Date Started: </strong>{infoData.dateStarted}</p> 
+            <p><strong>Date Ended: </strong>{infoData.dateEnded}</p>
+            <p><strong>Description: </strong>{infoData.jobDescription}</p>
 
             <button onClick={editForm}>Edit Form</button>
         </div>
@@ -62,10 +63,20 @@ export default function Form(){
     };
 
 
+    //operation to give formatted phone number
+    const formatNumber = (number) => {
+        var cleaned = ('' + number).replace(/\D/g, '');
+        var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return null;
+    }
+
     const infoData = {
         name: firstName + ' ' + lastName,
         email: email,
-        phoneNumber: phoneNumber,
+        phoneNumber: formatNumber(phoneNumber),
         schoolName: schoolName,
         major: major,
         dateOfStudy: dateOfStudy,
