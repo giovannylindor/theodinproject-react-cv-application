@@ -4,7 +4,11 @@ import Form from './components/Form';
 function App() {
     return(
         <>
-            <Form />
+        <div className='parent'>
+        <h1 style={{color: 'white', textAlign:'center'}}>Resume Template Generator</h1>
+        <Form />
+        </div>
+
         </>
     );
 }
